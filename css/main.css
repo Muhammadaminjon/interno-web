@@ -63,6 +63,9 @@ button {
 ul {
     list-style: none;
 }
+h1 {
+    margin: 0;
+}
 html {
     font-size: 62.5%;
     height: 100%;
@@ -163,34 +166,35 @@ body {
 .toggle {
     transform: translateX(0%);
     transition: all 0.6s ease;
- }
- .remove {
+}
+.remove {
     transform: translateX(-100%);
     transition: all 0.6s ease;
- }
- .right-nav {
+}
+.right-nav {
     width: 60vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #c69460;
     padding: 2rem;
- }
- .right-nav ul {
+}
+.right-nav ul {
     height: 100%;
     flex-direction: column;
+    display: flex;
     align-items: center;
     justify-content: center;
- }
- .right-nav .sitenav-item:not(:last-child) {
+}
+.right-nav .sitenav-item:not(:last-child) {
     margin-right: 0;
     margin-bottom: 1.5rem;
- }
- .right-nav a {
+}
+.right-nav a {
     font-size: 2rem;
- }
- .right-nav-btn {
+}
+.right-nav-btn {
     border: none;
     outline: none;
     background-color: transparent;
@@ -199,10 +203,11 @@ body {
     position: absolute;
     top: 30px;
     right: 30px;
- }
+}
 
 /* MAIN STYLES */
 .main {
+    flex-grow: 1;
 }
 .interior {
     background-image: url(../images/png/interior-bg-img.png);
@@ -222,23 +227,23 @@ body {
     font-weight: 400;
     font-size: 8rem;
     line-height: 1.2;
-    letter-spacing: 0.022rem;
+    letter-spacing: 0.002em;
     color: var(--secondary-color);
-    margin-bottom: 19px;
+    margin-bottom: 1.9rem;
 }
 .interior__text {
-    width: 100%;
-    max-width: 577px;
+    letter-spacing: 0.01em;
+    margin-bottom: 3.5rem;
 }
 .site-btn {
     width: 207px;
     height: 71px;
     display: inline-block;
     border: 2px solid  var(--secondary-color);
-    border-radius: 18px;
+    border-radius: 1.8rem;
     padding: 22px 22px;
     background-color: var(--secondary-color);
-    margin-top: 35px;
+    cursor: pointer;
 }
 .site-btn__text {
     font-size: 18px;
@@ -249,6 +254,9 @@ body {
 }
 .site-btn:hover {
     opacity: 0.8;
+}
+.site-btn:active {
+    opacity: 0.6;
 }
 .interior-btn {
     display: flex;
@@ -267,6 +275,12 @@ body {
     }
     .bars-btn {
         display: block;
+    }
+    .sitenav__item:not(:last-child) {
+        margin-right: 0rem;
+    }
+    .sitenav__link:active {
+        color: var(--secondary-color);
     }
 }
 @media only screen and (max-width: 576px) {
