@@ -215,6 +215,7 @@ body {
 .main {
     flex-grow: 1;
 }
+/* INTERIOR */
 .interior {
     background-image: url(../images/png/interior-bg-img.png);
     background-repeat: no-repeat;
@@ -222,7 +223,7 @@ body {
     background-position: center;
 }
 .interior__container {
-    padding: 19.5rem 0 ;
+    padding: 19.5rem 2rem ;
 }
 .interior__wrapper {
     width: 100%;
@@ -308,6 +309,33 @@ body {
 
 
 
+/* INFORMATION */
+.information {
+    
+}
+.information__container {
+    padding: 10rem 0;
+}
+.information__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.information__item {
+    padding-top: 7.5rem;
+}
+.information__item-title {
+}
+.information__item-text {
+}
+.information__item-link {
+}
+.information__item-link-img {
+}
+
+
+
 
 
 
@@ -318,7 +346,9 @@ body {
     
 }
 @media only screen and (max-width: 992px) {
-    
+    .interior__text {
+        text-shadow: 0 0 3px #fff;
+    }
 }
 @media only screen and (max-width: 768px) {
     .sitenav {
@@ -333,12 +363,45 @@ body {
     .sitenav__link:active {
         color: var(--secondary-color);
     }
+    .interior__title {
+        font-size: 6.9rem;
+    }
+    .interior__text {
+        font-size: 2rem;
+        width: 100%;
+        max-width: 450px;
+    }
 }
 @media only screen and (max-width: 576px) {
-    
+    .interior {
+        padding: 10rem 0 18rem;
+    }
+    .interior__title {
+        font-size: 5.5rem;
+    }
+    .interior__text {
+        max-width: 400px;
+    }
 }
 @media only screen and (max-width: 480px) {
-    
+    html {
+        font-size: 55%;
+    }
+    .site-logo__img {
+        width: 150px;
+        height: 40px;
+    }
+    .interior {
+        text-align: center;
+    }
+    .interior__title {
+        font-size: 5rem;
+        text-align: center;
+    }
+    .interior__text {
+        font-size: 1.8rem;
+        text-align: center;
+    }
 }
 @media only screen and (max-width: 370px) {
     
