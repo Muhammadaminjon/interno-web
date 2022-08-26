@@ -194,6 +194,12 @@ body {
 .right-nav a {
     font-size: 2rem;
 }
+.right-nav a:active {
+    color: var(--white-color);
+}
+.right-nav a:hover {
+    color: var(--white-color);
+}
 .right-nav-btn {
     border: none;
     outline: none;
@@ -245,6 +251,12 @@ body {
     background-color: var(--secondary-color);
     cursor: pointer;
 }
+.site-btn:hover {
+    background-color: transparent;
+}
+.site-btn:hover .site-btn__text {
+    color: var(--secondary-color);
+}
 .site-btn__text {
     font-size: 18px;
     line-height: 27px;
@@ -252,8 +264,12 @@ body {
     margin-right: 21px;
     color: var(--white-color);
 }
-.site-btn:hover {
-    opacity: 0.8;
+.site-btn__text:hover {
+    color: var(--secondary-color);
+}
+
+.site-btn:hover .site-btn__icon {
+    animation: arrowAnimation  2s linear;
 }
 .site-btn:active {
     opacity: 0.6;
@@ -261,6 +277,41 @@ body {
 .interior-btn {
     display: flex;
 }
+.site-btn__icon {
+    width: 33px;
+    height: 23px;
+}
+
+@keyframes arrowAnimation {
+    0% {
+        transform: translateX(0px);
+    }
+    10% {
+        transform: translateX(5px);
+    }
+    20% {
+        transform: translateX(-2px);
+    }
+    30% {
+        transform: translateX(3px);
+    }
+    40% {
+        transform: translateX(-1px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX();
+    }
+}
+
+
+
+
+
+
+
 
 /* RESPONSIVE */
 @media only screen and (max-width: 1200px) {
