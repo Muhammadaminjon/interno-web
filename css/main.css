@@ -441,8 +441,6 @@ body {
     object-position: center;
 }
 /* ABOUT US STYLES */
-.about-us {
-}
 .about-us__inner {
     background-color: var(--grey-bg-color);
     border-radius: 7rem;
